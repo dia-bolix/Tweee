@@ -45,6 +45,8 @@ The following **bonus** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/dia-bolix/Tweee/blob/master/tweee_preview2.gif?raw=true' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+GIF created with [DU Gif Maker](https://play.google.com/store/apps/details?id=com.duapps.gif.emoji.gifmaker&hl=en_US).
+
 
 ## Twee Part 1 
 

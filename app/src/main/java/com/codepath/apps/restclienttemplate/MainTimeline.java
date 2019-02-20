@@ -1,11 +1,15 @@
 package com.codepath.apps.restclienttemplate;
 
+import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.codepath.apps.restclienttemplate.models.Tweet;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -56,6 +60,25 @@ public class MainTimeline extends AppCompatActivity {
                 populateHomeTimeline();
             }
         });
+    }
+
+
+    //add the compose (menu) button to this activity
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //check if the item selected matches id of icon
+        if (item.getItemId() == R.id.compose) {
+            Intent i = new Intent(MainTimeline.this, ComposeActivity.class);
+            this.startActivity(i);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     //a function which populates the recycler view
